@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback: every route serves index.html so React Router handles it
+# (fixes blank page / 404 on refresh of /admin, /app, etc.)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
